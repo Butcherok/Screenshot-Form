@@ -41,6 +41,39 @@ export const App = () => {
           </InputWrapper>
         </DataWrapper>
       </Wrapper>
+      <Wrapper>
+        <Subtitle>Transactions</Subtitle>
+        <DataWrapper>
+          <InputWrapper>
+            <label>Instrument</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Side</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Price</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Total size</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Total volume</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Date</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+          <InputWrapper>
+            <label>Trade Id</label>
+            <p>USDT-BTC</p>
+          </InputWrapper>
+        </DataWrapper>
+      </Wrapper>
     </Container>
   );
 };

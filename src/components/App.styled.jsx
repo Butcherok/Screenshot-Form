@@ -21,11 +21,24 @@ export const Wrapper = styled.div`
 `;
 
 export const DataWrapper = styled.div`
-  display: flex;
+  display: table-row;
+  color: rgb(153, 153, 153);
 `;
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  display: table-cell;
+  padding: 12px 14px 12px 0px;
+  vertical-align: middle;
+  position: relative;
+  text-align: right;
+  border-bottom: 1px solid rgba(36, 48, 52, 0.2);
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: rgb(153, 153, 153);
 `;
 
 export const Title = styled.h1`
