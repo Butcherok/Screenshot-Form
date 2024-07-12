@@ -4,6 +4,10 @@ import {
   DataWrapper,
   Subtitle,
   InputWrapper,
+  TextWrapper,
+  TableWrapper,
+  TableCell,
+  TableCellHead,
 } from 'components/App.styled';
 import { useState } from 'react';
 
@@ -103,36 +107,40 @@ export const App = () => {
       </Wrapper>
       <Wrapper>
         <Subtitle>Transactions</Subtitle>
-        <DataWrapper>
-          <InputWrapper>
-            <label>Instrument</label>
-            <p>{myInputInstrument}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Side</label>
-            <p>{InputSide}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Price</label>
-            <p>{InputPrice}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Total size</label>
-            <p>{InputSize}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Total volume</label>
-            <p>{InputVolume}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Date</label>
-            <p>{InputDate}</p>
-          </InputWrapper>
-          <InputWrapper>
-            <label>Trade Id</label>
-            <p>{InputTrade}</p>
-          </InputWrapper>
-        </DataWrapper>
+        <TableWrapper>
+          <DataWrapper role="table">
+            <InputWrapper role="table-row">
+              <TableCellHead colspan="1" role="columnheader">
+                Instrument
+              </TableCellHead>
+              <TableCellHead>Side</TableCellHead>
+              <TableCellHead colspan="1" role="columnheader">
+                Price
+              </TableCellHead>
+              <TableCellHead colspan="1" role="columnheader">
+                Total size
+              </TableCellHead>
+              <TableCellHead colspan="1" role="columnheader">
+                Total volume
+              </TableCellHead>
+              <TableCellHead colspan="1" role="columnheader">
+                Date
+              </TableCellHead>
+              <TableCellHead colspan="1" role="columnheader">
+                Trade ID
+              </TableCellHead>
+            </InputWrapper>
+            <TextWrapper role="row">
+              <TableCell role="cell">{myInputInstrument}</TableCell>
+              <TableCell role="cell">{InputSide}</TableCell>
+              <TableCell role="cell">{InputPrice}</TableCell>
+              <TableCell role="cell">{InputSize}</TableCell>
+              <TableCell role="cell">{InputVolume}</TableCell>
+              <TableCell role="cell">{InputDate}</TableCell>
+              <TableCell role="cell">{InputTrade}</TableCell>
+            </TextWrapper>
+          </DataWrapper>
+        </TableWrapper>
       </Wrapper>
     </Container>
   );

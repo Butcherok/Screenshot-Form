@@ -18,27 +18,153 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 6px;
+  border-radius: 12px;
+  margin: 0px;
+  padding: 12px 12px 0px;
+  margin-bottom: 12px;
+  min-width: 100%;
+  overflow: hidden;
+
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
 `;
+export const TableWrapper = styled.div``;
 
 export const DataWrapper = styled.div`
-  display: table-row;
-  color: rgb(153, 153, 153);
+  display: table;
+  width: 100%;
+  min-width: 650px;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
 `;
 export const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: table-row;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
+  color: rgb(153, 153, 153);
+`;
+
+export const TableCellHead = styled.div`
   display: table-cell;
+  margin: 0px;
+  border: 0px;
   padding: 12px 14px 12px 0px;
   vertical-align: middle;
   position: relative;
   text-align: right;
-  border-bottom: 1px solid rgba(36, 48, 52, 0.2);
   font-family: InterVariable, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.02em;
-  color: rgb(153, 153, 153);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
+
+  &:first-child {
+    text-align: left;
+    padding-right: 0px;
+  }
+  &:nth-child(2) {
+    text-align: left;
+    padding-right: 0px;
+  }
+`;
+export const TableCell = styled.div`
+  display: table-cell;
+  margin: 0px;
+  border: 0px;
+  padding: 12px 14px 12px 0px;
+  vertical-align: middle;
+  position: relative;
+  text-align: right;
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
+
+  &:first-child {
+    text-align: left;
+    padding-right: 0px;
+  }
+  &:nth-child(2) {
+    text-align: left;
+    padding-right: 0px;
+  }
+  &:nth-child(2),
+  :nth-child(3) {
+    color: rgb(103, 208, 53);
+  }
+`;
+export const TextWrapper = styled.div`
+  display: table-row;
+  padding: 12px 14px 12px 0px;
+  text-align: right;
+  letter-spacing: -0.005em;
+  font-size: 14px;
+  line-height: 16px;
+  vertical-align: middle;
+  position: relative;
+  background-color: rgba(103, 208, 53, 0);
+  color: rgb(36, 48, 52);
+  font-family: InterVariable, sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-ligatures: none;
+  font-feature-settings: 'cv01', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease 0s;
 `;
 
 export const Title = styled.h1`
