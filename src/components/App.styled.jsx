@@ -121,8 +121,10 @@ export const TableCell = styled.div`
   font-family: InterVariable, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -0.02em;
+  font-style: normal;
+
+  line-height: 18px;
+  letter-spacing: 0px;
   font-variant-numeric: lining-nums tabular-nums;
   font-variant-ligatures: none;
   font-feature-settings: 'cv01', 'ss01';
@@ -131,8 +133,10 @@ export const TableCell = styled.div`
   box-sizing: border-box;
   outline: none;
   transition: all 0.2s ease 0s;
+  flex: 0.6 1 0%;
 
   &:first-child {
+    font-weight: 600;
     text-align: left;
     padding-right: 0px;
   }
@@ -165,6 +169,12 @@ export const TextWrapper = styled.div`
   box-sizing: border-box;
   outline: none;
   transition: all 0.2s ease 0s;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  max-width: 100px;
+  min-width: 35px;
 `;
 
 export const Title = styled.h1`

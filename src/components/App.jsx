@@ -8,6 +8,7 @@ import {
   TableWrapper,
   TableCell,
   TableCellHead,
+  Input,
 } from 'components/App.styled';
 import { useState } from 'react';
 
@@ -24,85 +25,89 @@ export const App = () => {
     <Container>
       <Wrapper>
         <Subtitle>Input data</Subtitle>
-        <DataWrapper>
-          <InputWrapper>
-            <label htmlFor="Instrument">Instrument</label>
-            <input
-              type="text"
-              name="Instrument"
-              id="Instrument"
-              autoComplete="off"
-              placeholder={'USDT-BTC'}
-              onChange={event => setmyInputInstrument(event.target.value)}
-            />
+        <DataWrapper role="table">
+          <InputWrapper role="table-row">
+            <TableCellHead htmlFor="Instrument">Instrument</TableCellHead>
+            <TableCellHead htmlFor="Side">Side</TableCellHead>
+            <TableCellHead htmlFor="Price">Price</TableCellHead>
+            <TableCellHead htmlFor="size">Total size</TableCellHead>
+            <TableCellHead htmlFor="volume">Total volume</TableCellHead>
+            <TableCellHead htmlFor="Date">Date</TableCellHead>
+            <TableCellHead htmlFor="Trade">Trade Id</TableCellHead>
           </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="Side">Side</label>
-            <input
-              type="text"
-              name="Side"
-              id="Side"
-              autoComplete="off"
-              placeholder={'Buy'}
-              onChange={event => setInputSide(event.target.value)}
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="Price">Price</label>
-            <input
-              type="text"
-              name="Price"
-              id="Price"
-              autoComplete="off"
-              placeholder={'1.00115435'}
-              onChange={event => setInputPrice(event.target.value)}
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="size">Total size</label>
-            <input
-              type="text"
-              name="size"
-              id="size"
-              autoComplete="off"
-              placeholder={'359846.62289800'}
-              onChange={event => setInputSize(event.target.value)}
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="volume">Total volume</label>
-            <input
-              type="text"
-              name="volume"
-              id="volume"
-              autoComplete="off"
-              placeholder={'360262.00000000'}
-              onChange={event => setInputVolume(event.target.value)}
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="Date">Date</label>
-            <input
-              type="datetime-local"
-              step="1"
-              name="Date"
-              id="Date"
-              autoComplete="off"
-              placeholder={' '}
-              onChange={event => setInputDate(event.target.value)}
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="Trade">Trade Id</label>
-            <input
-              type="text"
-              name="Trade"
-              id="Trade"
-              autoComplete="off"
-              placeholder={'14661102'}
-              onChange={event => setInputTrade(event.target.value)}
-            />
-          </InputWrapper>
+          <TextWrapper role="table-row">
+            <TableCell>
+              <Input
+                type="text"
+                name="Instrument"
+                id="Instrument"
+                autoComplete="off"
+                placeholder={'USDT-BTC'}
+                onChange={event => setmyInputInstrument(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="text"
+                name="Side"
+                id="Side"
+                autoComplete="off"
+                placeholder={'Buy'}
+                onChange={event => setInputSide(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="text"
+                name="Price"
+                id="Price"
+                autoComplete="off"
+                placeholder={'1.00115435'}
+                onChange={event => setInputPrice(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="text"
+                name="size"
+                id="size"
+                autoComplete="off"
+                placeholder={'359846.62289800'}
+                onChange={event => setInputSize(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="text"
+                name="volume"
+                id="volume"
+                autoComplete="off"
+                placeholder={'360262.00000000'}
+                onChange={event => setInputVolume(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="datetime-local"
+                step="1"
+                name="Date"
+                id="Date"
+                autoComplete="off"
+                placeholder={' '}
+                onChange={event => setInputDate(event.target.value)}
+              />
+            </TableCell>
+            <TableCell>
+              <Input
+                type="text"
+                name="Trade"
+                id="Trade"
+                autoComplete="off"
+                placeholder={'14661102'}
+                onChange={event => setInputTrade(event.target.value)}
+              />
+            </TableCell>
+          </TextWrapper>
         </DataWrapper>
       </Wrapper>
       <Wrapper>
